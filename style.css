@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: #fde5ec;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heart-container {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.pulse {
+  animation: pulse 0.15s ease;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Mitades del corazón roto */
+.broken-heart {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.half {
+  width: 100px;
+  transition: transform 0.3s linear;
+}
+
+.left {
+  transform: translateX(-100px);
+}
+
+.right {
+  transform: translateX(100px);
+}

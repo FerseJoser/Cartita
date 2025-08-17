@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te Amo ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fde5ec;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      position: relative;
+      animation: pop 0.6s ease;
+    }
+
+    h1 {
+      color: #755faa;
+      font-size: 2.5em;
+      margin: 10px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      background: #755faa;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: default; /* 👉 se ve deshabilitado */
+      opacity: 0.6;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0.5); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>❤️ Te Amo ❤️</h1>
+    <p>Este corazón es para ti, porque llenaste el mío por completo.</p>
+    <span class="btn">💌 Te dedico esta canción</span>
+  </div>
+
+  <script>
+    // ✅ Redirigir a index.html SOLO si se recarga la página
+    const navEntries = performance.getEntriesByType("navigation");
+    if (navEntries.length > 0 && navEntries[0].type === "reload") {
+      window.location.replace("index.html");
+    }
+
+    // Compatibilidad con navegadores antiguos
+    if (performance.navigation && performance.navigation.type === 1) {
+      window.location.replace("index.html");
+    }
+  </script>
+
+    
+
+
+
+</body>
+</html>
