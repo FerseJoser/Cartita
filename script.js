@@ -19,7 +19,7 @@ function startFilling(e) {
   clearInterval(interval);
   interval = setInterval(() => {
     if (filling && fillLevel > 0) {
-      fillLevel -= 1;
+      fillLevel -= 0.66;
       updateFill();
 
       // Si está lleno → redirige
