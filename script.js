@@ -9,9 +9,10 @@ function updateFill() {
   fillRect.setAttribute("height", 100 - fillLevel);
 }
 
-// Inicia el llenado
-function startFilling(e) {
-  e.preventDefault(); // evita scroll en móvil
+let isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+let fillStep = isMobile ? 1.5 : 0.5;  // en móvil sube más rápido
+
+function startFilling() {
   filling = true;
   heartSvg.classList.add("pulse");
   setTimeout(() => heartSvg.classList.remove("pulse"), 150);
@@ -19,10 +20,10 @@ function startFilling(e) {
   clearInterval(interval);
   interval = setInterval(() => {
     if (filling && fillLevel > 0) {
-      fillLevel -= 1.5;
+      fillLevel -= fillStep;
+      if (fillLevel < 0) fillLevel = 0;
       updateFill();
 
-      // Si está lleno → redirige
       if (fillLevel <= 0) {
         window.location.href = "mensaje.html";
       }
