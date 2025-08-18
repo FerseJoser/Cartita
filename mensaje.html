@@ -44,6 +44,10 @@
       opacity: 0.6;
     }
 
+    p{
+      font-style: italic;
+    }
+
     @keyframes pop {
       0% { transform: scale(0.5); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -56,18 +60,29 @@
 
   <div class="card">
     <h1>❤️ Te Amo ❤️</h1>
-    <p>Este corazón es para ti, porque llenaste el mío por completo como diá tras día lo haces. </p>
+    <p>Este corazón es para ti, porque llenaste el mío por completo, como día tras día lo haces.
+Anteriormente me pediste un relato acerca del inicio de mis sentimientos hacia ti, hasta el día de hoy, y no sabía la manera de hacerlo. Si bien te distinguí allá por el 2017, la forma en la que empezaron a surgir sentimientos por ti fue unos años después, tiempo después de surgida nuestra amistad, pero me bastó poco para que despertaran.
+
+Primeramente me pareciste muy linda y tierna, y al ir compartiendo contigo nuestros gustos en común, y conociendo las diferencias que también tenemos, todo fue tan natural, sin necesidad de forzar nada. Con el paso del tiempo, el gusto iba aumentando más y más, hasta el punto en que me sentía cada vez más enamorado.
+
+Debido a causas conocidas, mi mente pensó en alejarme de ti. Si bien, de alguna manera, reprimí dichos sentimientos, no dejaban de existir ni de estar presentes en distintas formas, como recuerdos y detalles que me obsequiaste. Al querer volver a tener contacto contigo, de alguna manera quería revivir todo aquello que nos unía en su momento, pero teniendo en cuenta tu falta de confianza —con toda la razón del mundo— sentí que no iba a ser de esa forma; aun así, no quería abandonar esa idea, aunque volviésemos a ser solo amigos.
+
+Había estado enamorado de ti en silencio, Diana Marcela, porque no quería alejarme de ti ya más, no quería que te apartaras. Una noche, en el trabajo, pensaba: “Tengo que tomar una decisión. Hemos sido tan compatibles, que lo que quiero en realidad no es ser solo su amigo. Quiero ser su pareja”.
+
+Iniciada nuestra relación, aunque no te conociese intrapersonalmente, me entregué por completo, y al conocerte mejor, mis sentimientos han ido creciendo de manera agigantada. De prisa te he querido, deprisa me enamoré y deprisa te amé.
+
+Y no ha habido un solo día en que no haya sido así, un día en el que no aspire a tu bienestar en todas las formas posibles.</p>
     <span class="btn">💌 Te dedico esta canción</span>
   </div>
 
   <script>
-    // ✅ Redirigir a index.html SOLO si se recarga la página
+   
     const navEntries = performance.getEntriesByType("navigation");
     if (navEntries.length > 0 && navEntries[0].type === "reload") {
       window.location.replace("index.html");
     }
 
-    // Compatibilidad con navegadores antiguos
+    
     if (performance.navigation && performance.navigation.type === 1) {
       window.location.replace("index.html");
     }
