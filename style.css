@@ -6,8 +6,50 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+   background: #fde5ec;
+  background: -webkit-linear-gradient(to left, #b706bd, #fde5ec);
+  background: linear-gradient(to left, #b706bd, #fde5ec);
+  overflow: hidden;
 }
 
+.star0 {
+  height: 1px;
+  width: 1px;
+  opacity: 1;
+  position: absolute;
+}
+
+.star1 {
+  height: 2px;
+  width: 2px;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+}
+
+.star2 {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+}
+
+.star3 {
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  opacity: 1;
+  position: absolute;
+}
+
+
+#dale{
+
+color: #755faa;
+
+
+}
 .heart-container {
   width: 200px;
   height: 200px;
