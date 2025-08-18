@@ -23,10 +23,9 @@ function updateFill() {
   fillRect.setAttribute("height", 100 - fillLevel);
 }
 
-let isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-let fillStep = isMobile ? 1.5 : 0.5;  // en móvil sube más rápido
-
-function startFilling() {
+// Inicia el llenado
+function startFilling(e) {
+  e.preventDefault(); // evita scroll en móvil
   filling = true;
   heartSvg.classList.add("pulse");
   setTimeout(() => heartSvg.classList.remove("pulse"), 150);
@@ -34,14 +33,10 @@ function startFilling() {
   clearInterval(interval);
   interval = setInterval(() => {
     if (filling && fillLevel > 0) {
-<<<<<<< HEAD
       fillLevel -= 1.5;
-=======
-      fillLevel -= fillStep;
-      if (fillLevel < 0) fillLevel = 0;
->>>>>>> origin/main
       updateFill();
 
+      // Si está lleno → redirige
       if (fillLevel <= 0) {
         window.location.href = "mensaje.html";
       }
@@ -71,7 +66,6 @@ heartContainer.addEventListener("mouseleave", stopFilling);
 // Eventos para móvil
 heartContainer.addEventListener("touchstart", startFilling, { passive: false });
 heartContainer.addEventListener("touchend", stopFilling, { passive: false });
-
 
 for (var i = 0; i < starCount; ++i) {
   var ypos = Math.round(Math.random() * height);
